@@ -1,0 +1,15 @@
+DELETE FROM `productorders`;
+DELETE FROM `productcategories`;
+DELETE FROM `products`;
+DELETE FROM `categories`;
+DELETE FROM `orders`;
+ALTER TABLE `productorders` AUTO_INCREMENT = 1;
+ALTER TABLE `productcategories` AUTO_INCREMENT = 1;
+ALTER TABLE `products` AUTO_INCREMENT = 1;
+ALTER TABLE `categories` AUTO_INCREMENT = 1;
+ALTER TABLE `orders` AUTO_INCREMENT = 1;
+
+
+
+
+python main.py --type all --authentication-url http://127.0.0.1:5000 --jwt-secret JWT_SECRET_KEY --roles-field roles --owner-role owner --customer-role customer --courier-role courier --with-authentication --owner-url http://127.0.0.1:5001 --customer-url http://127.0.0.1:5002 --courier-url http://127.0.0.1:5003
